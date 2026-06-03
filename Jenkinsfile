@@ -1,24 +1,19 @@
 pipeline {
-
     agent any
-
     stages {
-
         stage('Checkout') {
             steps {
-                git branch: 'develop', url: 'https://github.com/Kosten-73/demo.git'
+                git branch: 'master', url: 'https://github.com/Kosten-73/CICDJob.git'
             }
         }
-
         stage('Run Orchestrator') {
             steps {
-                bat 'python3 orchestrator/main.py'
+                bat 'python orchestrator/main.py'
             }
         }
-
         stage('Load Testing') {
             steps {
-                bat './scripts/load_test.sh'
+                bat 'scripts\\load_test.bat'
             }
         }
     }
