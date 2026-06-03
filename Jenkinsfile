@@ -12,13 +12,13 @@ pipeline {
 
         stage('Run Orchestrator') {
             steps {
-                sh 'python3 orchestrator/main.py'
+                bat 'python3 orchestrator/main.py'
             }
         }
 
         stage('Load Testing') {
             steps {
-                sh './scripts/load_test.sh'
+                bat './scripts/load_test.sh'
             }
         }
     }
