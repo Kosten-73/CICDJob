@@ -26,7 +26,6 @@ class PipelineController:
     def monitor_pipeline(self):
         print("📊 Monitoring pipeline status...")
 
-        # упрощённый мониторинг (для диплома достаточно)
         for i in range(5):
             print(f"Checking status... attempt {i+1}")
             time.sleep(5)

@@ -9,22 +9,18 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'pip install PyGithub'
-                bat 'pip install requests'
-                bat 'pip install python-jira'  // если используете Jira
-                // bat 'pip install -r requirements.txt'  // если есть файл
+                bat 'C:\\Users\\korudenko\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe -m pip install -r requirements.txt'
             }
         }
 
         stage('Run Orchestrator') {
             steps {
-                bat 'python orchestrator/main.py'
+                bat 'C:\\Users\\korudenko\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe orchestrator/main.py'
             }
         }
 
         stage('Load Testing') {
             steps {
-                bat 'echo Running load tests...'
                 bat 'scripts\\load_test.bat'
             }
         }
