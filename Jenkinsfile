@@ -204,7 +204,7 @@ pipeline {
                             echo ========================================
                             echo 📌 Создание коммита...
                             echo ========================================
-                            git commit -m "SCRUM-2 Update version pom file" || echo "Nothing to commit"
+                            git commit -m "SCRUM-5 Update version pom file" || echo "Nothing to commit"
 
                             echo ========================================
                             echo 📌 Пуш в удалённый репозиторий...
